@@ -12,7 +12,7 @@ export default {
         "gray-custom": '#71767b',
         "gray-custom-light": '#e7e9ea',
         "border-gray": '#273336',
-        "gray-input": '202327',
+        "gray-input": '#202327',
         "icon-blue": '#1d9bf0',
         "icon-pink": '#00ba76',
         "icon-green": '#f91880',
