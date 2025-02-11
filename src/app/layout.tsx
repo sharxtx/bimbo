@@ -14,7 +14,7 @@ export default function RootLayout({
           <div className="px-2 xsm:px-4 xxl:px-8">
             <MenuBar />
           </div>
-          <div className="flex-1 lg:max-w-[600px] border-x-[1px] border-border-gray">
+          <div className="flex-1 lg:min-w-[600px] border-x-[1px] border-border-gray">
             {children}
           </div>
           <div className="hidden lg:flex ml-4 md:ml-8 flex-1">
