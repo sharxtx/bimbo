@@ -1,6 +1,8 @@
-import Image from 'next/image'
+'use client'
+
 import Link from 'next/link'
 import React from 'react'
+import Image from './Image';
 
 const menuList = [
   {
@@ -72,7 +74,7 @@ const MenuBar = () => {
       <div className='flex flex-col gap-2 items-center xxl:items-start'>
         {/* LOGO */}
         <Link href='/'>
-          <Image src='/icons/logo.svg' alt='logo' width={36} height={36} />
+          <Image path='/icons/logo.svg' alt='logo' w={36} h={36} />
         </Link>
 
         {/* MENU */}
@@ -80,7 +82,7 @@ const MenuBar = () => {
           {
             menuList.map(item => (
               <Link href={item.link} className='flex gap-4 items-center p-2 hover:bg-[#181818] hover:rounded-full' key={item.id}>
-                <Image src={`/icons/${item.icon}`} alt={item.name} width={24} height={24} />
+                <Image path={`/icons/${item.icon}`} alt={item.name} w={24} h={24} />
                 <span className='hidden xxl:inline'>{item.name}</span>
               </Link>
             ))
@@ -88,7 +90,7 @@ const MenuBar = () => {
 
           {/* POST */}
           <Link href='/' className='flex items-center justify-center w-12 h-12 bg-white rounded-full xxl:hidden'>
-            <Image className='' src='/icons/post.svg' alt='post' width={24} height={24} />
+            <Image path='/icons/post.svg' alt='post' w={24} h={24} />
           </Link>
           <Link href='/' className='hidden py-3 px-28 bg-white text-black rounded-full xxl:inline'>
             <span >Post</span>
@@ -101,8 +103,8 @@ const MenuBar = () => {
       {/* USER*/}
       <div className='flex items-center justify-between'>
         <div className='flex items-center gap-2'>
-          <div className='relative w-10 h-10 rounded-full bg-red-600 p-2 overflow-hidden'>
-            <Image src='/general/avatar.png' alt='profile' fill/>
+          <div className='relative w-10 h-10 rounded-full p-2 overflow-hidden'>
+            <Image path='/general/avatar.png' alt='profile' transformation priority={true} />
           </div>
           <div className='hidden xxl:flex flex-col'>
             <span className='font-bold'>Sharath</span>
